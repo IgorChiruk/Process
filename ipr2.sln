@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ipr2", "lab2\ipr2.csproj", "{D4BB6D80-8462-43C0-915A-F92A712E5B9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4BB6D80-8462-43C0-915A-F92A712E5B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4BB6D80-8462-43C0-915A-F92A712E5B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4BB6D80-8462-43C0-915A-F92A712E5B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4BB6D80-8462-43C0-915A-F92A712E5B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5600AC8-D87B-48AE-BF01-90284845EC7E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\bin\Debug\lab2.exe.config
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\bin\Debug\lab2.exe
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\bin\Debug\lab2.pdb
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\bin\Debug\Microsoft.Office.Interop.Excel.dll
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\bin\Debug\stdole.dll
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\obj\Debug\ipr2.csprojAssemblyReference.cache
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\obj\Debug\Interop.VSTOEE100.dll
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\obj\Debug\ipr2.csproj.ResolveComReference.cache
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\obj\Debug\lab2.Form1.resources
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\obj\Debug\lab2.Properties.Resources.resources
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\obj\Debug\ipr2.csproj.GenerateResource.cache
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\obj\Debug\ipr2.csproj.CopyComplete
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\obj\Debug\lab2.exe
+e:\Учеба\Семестр 9\Математическое моделирование\мое\ИПР2\final\lab2\lab2\obj\Debug\lab2.pdb
