@@ -19,13 +19,17 @@ namespace lab2
     {
         EX excel = new EX();
         PointPairList cos = new PointPairList();
+        PointPairList mx_list = new PointPairList();
         double tmin = 0;
         double tmax = 30;
         double a = 1;
         double w = 1;
 
-        double m = 0;
-        double d = 0;
+        double mx = 0;
+        double dx = 0;
+        double sko = 0;
+        double rx = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -50,8 +54,10 @@ namespace lab2
             GraphPane pane = zedGraph.GraphPane;
             pane.CurveList.Clear();
 
-            M();
-            D();
+            Mx();
+            Dx();
+            Rx();
+
             // Создадим список точек
             double z = excel.PIrand();
             // Заполняем список точек
@@ -101,59 +107,78 @@ namespace lab2
             LineItem myCurve1 = pane.AddCurve("Process", cos, Color.Red, SymbolType.None);
             zedGraph.AxisChange();
             zedGraph.Invalidate();
+
+            Mx();
+            Dx();
+            Rx();
         }
-
-        private void M()
-        {        
-                m = 0;
-
-                for (int i = 0; i < 10000; i++)
-                {
-                    m = m + excel.Cos_rand();
-                }
-                m = m / 10000;
-
-            double s = 0;
+        // МАт ожидание
+        private void Mx()
+        {
+            mx = 0;
+            mx_list.Clear();
             for (int i = 0; i < 10000; i++)
             {
-                s = s + excel.Sin_rand();
+                double z = excel.PIrand();
+                mx_list.Add(i, Program.cos(a, w, 1, z));
             }
-            s = s / 10000;
 
-            double mp = 0;
-            int z = 0;
-            mp = (a * Math.Cos(w * 1) * m + a * Math.Sin(w * 1) * s);
-            for (double x = tmin; x <= tmax; x += 0.01)
+            foreach(ZedGraph.PointPair i in mx_list)
             {
-                mp =mp + (a * Math.Cos(w * x) * m + a * Math.Sin(w * x) * s);
-                z++;
+                mx += i.Y;
             }
 
-            mp = mp / z;
+            mx /= 10000;
 
-            textBox_MX.Text = mp.ToString();
-            //double result = a * Math.Cos(w * 1) * Math.Cos(m) + a * Math.Sin(w * 1) * Math.Sin(m);
-            //double c = 0;
+            textBox_MX.Text = mx.ToString();
+           
+        }
+        //Дисперсия и СКО
+        private void Dx()
+        {
+            dx = 0;
+
+            for (int i = 0; i < 10000; i++)
+            {
+                double z = excel.PIrand();
+                double temp = (Program.cos(a, w, 1, z))-mx;
+                dx += Math.Pow(temp,2)/ 10000;
+            }
+
+
+            textBox_DX.Text = dx.ToString();
+
+            sko = Math.Sqrt(dx);
+            textBox_SKO.Text = sko.ToString();
+
+            //2-й вариант
+
             //for (int i = 0; i < 10000; i++)
             //{
-            //    c = c + excel.Cos_rand();
+            //    d =d+(Math.Pow(excel.Cos_rand()-0.00056,2))/9999;
             //}
-            //c = c / 10000;
+            //d = a * Math.Cos(w * 1) * Math.Cos(d) + a * Math.Sin(w * 1) * Math.Sin(d);
+
+            //textBox_DX.Text = d.ToString();
+
 
         }
 
-        private void D()
+        //Корреляционная функция
+
+        private void Rx()
         {
-            d = 0;
+            rx = 0;
 
             for (int i = 0; i < 10000; i++)
             {
-                d =d+(Math.Pow(excel.Cos_rand()-0.00056,2))/9999;
+                double z = excel.PIrand();
+                double temp1 = (Program.cos(a, w, 1, z)) - mx;
+                double temp2 = (Program.cos(a, w, 2, z)) - mx;
+                rx += (temp1 * temp2) / 10000;
             }
-            d = a * Math.Cos(w * 1) * Math.Cos(d) + a * Math.Sin(w * 1) * Math.Sin(d);
 
-            textBox_DX.Text = d.ToString();
-            textBox_SKO.Text = Math.Sqrt(d).ToString();
+            textBox_rx.Text = rx.ToString();
         }
 
     }
